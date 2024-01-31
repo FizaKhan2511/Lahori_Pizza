@@ -1,0 +1,19 @@
+﻿@page
+@model Lahori_Pizza.Pages.Admin.IndexModel
+@{
+}
+
+<h3>You have to identify yourself</h3>
+<br />
+@if (Model.messageError)//c'est comme ça que je récupère une variable de index.cshtml.cs'
+{
+    <div class="alert alert-danger"role="alert">
+    The username or the password is not correct
+    </div>
+}
+<br />
+<form method="post">
+ <input type="text" name="username" placeholder="Login">
+ <input type="password" name="password" placeholder="Password">
+ <button>Connect</button>
+</form>

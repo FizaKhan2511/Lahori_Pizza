@@ -1,0 +1,42 @@
+﻿@page
+@model Lahori_Pizza.Pages.PizzaMenuModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Menu</title>
+    <link rel="stylesheet" href="~/css/style.css" />  <!-- ~ veut dire que l'on démarre sur le répértoire de wwwroot-->
+</head>
+<body>
+
+
+    <a asp-page="Index"> <h1>Lahori Pizza</h1></a> <!--Le lien va vers Index.cshtml-->
+
+    <div class="PizzaMenu"> <h2>Pizza Menu</h2></div>
+
+    
+    <!--il faut aller voir dans PizzaMenu.cshtml.cs-->
+    <div class="donnees">
+    @foreach (var item in Model.Pizza)
+    {
+       
+        <ul>
+            <li>  <span class="name"> @item.name </span>
+                    <span class="price"> @String.Format("{0:0.00}",item.price) €</span>
+                  <span class="ingredient"> @item.ingredient </span>
+                    @if (item.vegetarien == true)
+                    {
+                        <span class="vegetarian">Vegetarian</span>
+                    }
+                </li>
+            
+        </ul>
+        
+    }
+    </div>
+   
+</body>
+</html>
+

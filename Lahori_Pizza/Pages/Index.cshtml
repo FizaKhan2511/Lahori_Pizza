@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!--Hot reload permet de voir le changements dans le html sans devoir stopper le programme. Il faut coché hot reload on file save
+    mais c'est disponible que en .net 6
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="~/css/style.css" />  <!-- ~ veut dire que l'on démarre sur le répértoire de wwwroot-->
+</head>
+<body class="homePage">
+    <div class="centered">    
+        <h1 class="display-4">Lahori Pizza</h1>   
+           <h3><a asp-page="PizzaMenu" class="centered">Go to Pizza's Menu</a></h3> <!--Le lien va vers PizzaMenu.cshtml-->       
+    </div>
+
+</body>
+</html>
+
+

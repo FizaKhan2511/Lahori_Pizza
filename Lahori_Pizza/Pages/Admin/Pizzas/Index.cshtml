@@ -1,0 +1,106 @@
+@page
+@model Lahori_Pizza.PagesPizzas.IndexModel
+
+@{
+   // Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!--Index c'est la première vu qui affiche l'ensemble des pizzas-->
+<!--si je veux que ma page se lance dans le admin il faut aller dans propriété du projet, dans debug, open launch..., et url -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin pizzas</title>
+</head>
+<body>
+    <h1>Admin pizzas</h1>
+<p>
+    <!--Appelle la page create qui crée une nouvelle pizza-->
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].vegetarien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].ingredient)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pizza) {
+        <tr>
+            <td>
+                @item.name<!--on peut enlever le display mais pas quand c'est pas une string-->
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vegetarien)
+            </td>
+            <td class="ingredient">
+                @Html.DisplayFor(modelItem => item.ingredient)
+            </td>
+            <td>
+                <!--asp-page="./Edit" sur la page edit et passe le id de la pizza-->
+                <a asp-page="./Edit" asp-route-id="@item.PizzaID">Edit</a> | 
+                <a asp-page="./Delete" asp-route-id="@item.PizzaID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
+
+<!--du style que j'ai rajouté-->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #999;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>

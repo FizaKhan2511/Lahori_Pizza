@@ -1,0 +1,124 @@
+﻿
+/*La page de menu pizza*/
+
+body {
+    
+    background: url("../images/menuBackground1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*background-attachment:scroll;*/
+    /*background-image: url("../images/menuBackground.jpg");
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+
+h1 {
+    margin-top: 40px;
+    margin-left: 70px;
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    font-size: 75px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: whitesmoke;
+   
+}
+
+a {
+    text-decoration: none; /* Enlever le soulignement des liens */
+}
+
+.PizzaMenu{
+    margin-bottom : 75px;
+}
+
+h2 {
+    color: whitesmoke;
+    background-color: #cb1f1f;
+    display: inline;
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-left: 80px;
+    margin-bottom : 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-style : italic;
+  
+}
+
+li {
+    list-style : none;
+}
+
+.donnees {
+    margin-left : 50px;
+}
+
+
+ .name {
+    color : whitesmoke;
+    font-family : Arial;
+    font-weight : bold;
+    font-size : 20px
+}
+
+.price {
+    color: #cb1f1f;
+    font-size : 20px;
+    margin-left : 8px;
+}
+
+.ingredient {
+    display: block; /*Pour que les ingredients s'affichent sur la ligne suivante*/
+    color: goldenrod;
+    margin-top: 4px;
+    width: 350px; /*Pour que la liste des ingrédients revienne à la ligne suivante quand elle est trop longue*/
+    word-wrap: break-word; /* Permet au texte de se casser et de revenir à la ligne. Sans ça le width ne fonctionne pas chez moi */
+   
+}
+    
+
+
+.vegetarian {
+    background-color: rgba(0, 0, 0, 0.3); /* 0.5 représente une opacité à 50% */
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom : 7px;
+    padding: 4px;
+    border-radius : 10px;
+    display : inline-block;/*Pour ajouter du margin*/
+}
+
+/*Home Page*/
+
+.homePage {
+    background: url("../images/mainBackground.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+a {
+    margin-top: 100px; /* Espace entre le titre et le lien */
+    color: red;
+    font-family: "Copperplate", "Papyrus", "fantasy";
+}
+
+
+
+
+
+
